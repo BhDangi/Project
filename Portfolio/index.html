@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="style3.css">
+    <link rel="stylesheet" href="style4.css">
+</head>
+<body>
+    <header class="container">
+        <div class="page-header">
+            <div class="logo">
+                <a href="#">Logo.</a>
+            </div>
+            <input type="checkbox" id="click">
+            <label for="click" class="mainicon">
+                <div class="menu">
+                    <i class="bx bx-menu"></i>
+                </div>
+            </label>
+            <ul>
+                <li><a href="#" class="active" style="--navAni:1">Home</a></li>
+                <li><a href="#" style="--navAni:2">About</a></li>
+                <li><a href="#" style="--navAni:3">Skills</a></li>
+                <li><a href="#" style="--navAni:4">Project</a></li>
+                <li><a href="#" style="--navAni:5">Contact</a></li>
+            </ul>
+            <label class="mode">
+                <input type="checkbox" id="darkModeToggle">
+                <i class="bx bxs-moon"></i>
+            </label>
+        </div>
+    </header>
+
+    <section class="container">
+        <div class="main">
+            <div class="images">
+                <img src="image1.jpg" alt="image" class="img-w">
+                <span class="bf-effect-1">
+                    <span class="bg-effect-1"></span>
+                </span>
+            </div>
+            <div class="detail">
+                <h3>Hi, I'm</h3>
+                <h1 ><span style="color: #f9532d;">Bhavesh</span>Dangi</h1>
+                <p>I'm a Web Developer. Our Main Goal to Satisficed the Local & Global Clients by
+                    web development solutions
+                </p> 
+                <div class="social">
+                    <a href="linkedin" style="--socialAni:1" ><i class='bx bxl-linkedin'></i></a>
+                    <a href="instagram" style="--socialAni:2" ><i class='bx bxl-instagram'></i></a>
+                    <a href="github" style="--socialAni:3" ><i class='bx bxl-github'></i></a>
+                </div> 
+            </div> 
+        </div>
+    </section>
+
+
+    <section id="about" class="about">
+        <div class="main-abt">
+                <h2 class="heading">
+                    <span class="heading-main">About Me</span>
+                    <span class="heading-sub">
+                      " Here you will find more information about me, what I do, and my
+                      current skills mostly in terms of programming and technology. "
+                    </span>
+                </h2>
+            
+            <div class="abt_main">
+                <div class="abt_info">
+                    <h3 class="abt_info-title">Get to know me!</h3>
+                   <div class="abt_info-details">
+                    Hello there! I'm a passionate web developer with a knack for crafting robust and user-friendly websites. I thrive on turning creative ideas into functional, visually appealing, and responsive digital experiences.
+                    Web development is more than just a job for me; it's a continuous journey of learning and problem-solving. I find joy in creating seamless, interactive interfaces that not only meet but exceed user expectations. The ever-evolving nature of the tech industry keeps me motivated to stay curious and embrace new challenges.
+                    I'm open to Job opportunities where I can contribute, learn and grow. If you have a good opportunity that matches my skills and experience then don't hesitate to contact me.
+                    </div>
+                    <a href="#" class="main_submit-btn" >Contact</a>
+                </div>
+                <div class="abt-skl">
+                    <h3 class="abt_skl-header">My Skills</h3>
+                    <div class="abt_skills">
+                       <div class="abt_skills-skill">HTML</div>
+                       <div class="abt_skills-skill">CSS</div>
+                       <div class="abt_skills-skill">JavaScript</div>
+                       <div class="abt_skills-skill">JAVA</div>
+                       <div class="abt_skills-skill">Python Basic</div>
+                       <div class="abt_skills-skill">MySQL</div>
+                       <div class="abt_skills-skill">Excel</div>
+                   </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="project">
+        <div class="prj_main">
+            <h2 class="heading">
+                <span class="heading-main">PROJECTS</span>
+                <span class="heading-sub">
+                    Here you will find some of the personal and clients 
+                    projects that I created with each project containing 
+                    its own case study
+                </span>
+            </h2>
+            
+            <div class="prj_content">
+                <div class="prj_content-row">
+                    <div class="prj_content-img">
+                        <img src="abc.jpeg" alt="Project Screenshot" class="prj_row-img">
+                    </div>
+                    <div class="prj_content-info">
+                        <h3 class="prj_row-title">Portfolio</h3>
+                        <p class="prj_row-detail">
+                            A portfolio website is a curated, online space that showcases your 
+                            best work. It's one of the most practical and memorable ways to 
+                            share your work with press, potential collaborators or employers. 
+                            Much like your PDF portfolio, a portfolio website can be used  
+                            when applying for jobs or internships</p>
+                        <a class="main_submit-btn" href="#project" target="blank">Details</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contacts" class="contact">
+        <div class="cont_main">
+          <h2 class="heading">
+            <span class="heading-main">Contact</span>
+            <span class="heading-sub">
+              Feel free to Contact me by submitting the form below and I will get
+              back to you as soon as possible
+            </span>
+          </h2>
+          <div class="cont_form">
+            <form action='#' class='contact__form' method='post'>
+                <input type='hidden' name='form-name' value='form 1' />
+              <div class="cont_form-field">
+                <label class="cont_form-label" for="name">Name</label>
+                <input required placeholder="Enter Your Name" type="text" class="cont_form-input" name="name"
+                  id="name" />
+              </div>
+              <div class="cont_form-field">
+                <label class="cont_form-label" for="email">Email</label>
+                <input required placeholder="Enter Your Email" type="email" class="cont_form-input" name="email"
+                  id="email" />
+              </div>
+              <div class="cont_form-field">
+                <label class="cont_form-label" for="message">Message</label>
+                <textarea required cols="30" rows="10" class="cont_form-input" placeholder="Enter Your Message"
+                  name="message" id="message"></textarea>
+              </div>
+              <button type="submit" class="main_submit-btn">
+                Submit
+              </button>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <footer class="footer">
+        <div class="main-footer">
+            &copy; Copyright
+            <script>document.write(new Date().getFullYear())</script>. Made by
+            <a rel="noreferrer" target="_blank" href="#">Bhavesh Dangi</a>
+        </div>
+      </footer>
+
+    <script>
+         const darkModeToggle = document.getElementById('darkModeToggle');
+        const body = document.body;
+        const isDarkMode = localStorage.getItem('darkMode') === 'enabled';
+        if (isDarkMode) {
+            body.classList.add('dark-mode');
+            darkModeToggle.checked = true;
+        }
+        darkModeToggle.addEventListener('change', () => {
+            if (darkModeToggle.checked) {
+                body.classList.add('dark-mode');
+                localStorage.setItem('darkMode', 'enabled');
+            } else {
+                body.classList.remove('dark-mode');
+                localStorage.setItem('darkMode', 'disabled');
+            }
+        });
+    </script>
+</body>
+</html>
