@@ -16,11 +16,20 @@ body{
     font-family: 'Outfit', sans-serif;
     background-color: #fff;
     height: 100vh;
-    color: #000;
+    color: #000000;
 }
 
+.containers {
+    padding: 0 8.4rem;
+    background-color: #1c1a1a;
+   
+}
 .container {
     padding: 0 8.4rem;
+    flex-direction: column;
+    justify-content: space-around;
+    
+    
 }
 .img-w {
     width: 100%;
@@ -43,15 +52,15 @@ header {
 }
 
 .logo {
-    font-size: 1.5rem;
-    font-weight: 800;
-    opacity: 0;
     animation: leftSideAni 1s ease forwards;
 }
 
-.logo a {
+.logo img{
     color: #000;
     text-decoration: none;
+    height: 80px;
+    border-radius: 20%;
+    box-shadow: 2px 6px 8px ;
 }
 
 ul {
@@ -65,9 +74,9 @@ ul {
 li a {
     display: inline-block;
     padding: .3rem 1rem;
-    color: #000;
+    color: #f2e6e6;
     text-decoration: none;
-    font-size: 1.05rem;
+    font-size: 2.05rem;
     font-weight: 600;
     letter-spacing: .7px;
     border-radius: 36px;
@@ -106,6 +115,7 @@ li a:hover {
     row-gap: 2rem;
     column-gap: 6rem;
     align-items: center;
+    height: 80vh;
 }
 
 .main h3 {
@@ -117,11 +127,20 @@ li a:hover {
 
 .main h1 {
     color: #000;
-    font-size: 4rem;
+    font-size: 6rem;
     font-weight: 600;
     opacity: 0;
     animation: leftSideAni 1s ease forwards;
     animation-delay: 1s;
+}
+.main h3 {
+    font-weight: 300;
+    font-size: 3rem;
+}
+.main p {
+    font-size: 2rem;
+    font-weight: 200;
+    color: #686464;
 }
 
 .social {
@@ -195,8 +214,9 @@ li a:hover {
 
 .dark-mode header {
     box-shadow: 0 4px 17px rgb(80 80 80 / 31%);
-    background: var(--primary-dark);
+    
 }
+
 
 
 @keyframes leftSideAni {
@@ -343,7 +363,7 @@ li a:hover {
 }
 /* about */
 #about {
-    background-color: #fafafa;
+    
     padding:0 3rem;
 }
 
@@ -371,7 +391,7 @@ li a:hover {
     top: calc(100% + 1.5rem);
     height: 5px;
     width: 3rem;
-    background: #7843e9;
+    background: #d8eaf0;
     left: 50%;
     transform: translateX(-50%);
     border-radius: 5px;
@@ -417,6 +437,7 @@ li a:hover {
     box-shadow: 0 5px 15px 0 rgba(0,0,0,.15);
     transition: transform .3s;
     text-decoration-line: none;
+    margin-right: 10px;
 }
 
 .abt_skl-header {
@@ -437,10 +458,18 @@ li a:hover {
     background: rgba(161, 152, 152, 0.2);
     border-radius: 5px;
     font-weight: 600;
-    color: #666;
+    color: #423e3e;
+}
+.dark-mode .abt_skills-skill{
+    color: #bebeb5;
+}
+
+
+.dark-mode .heading-main {
+    color: var(--primary-color);
 }
 #projects{
-    background-color: #9e9797;
+    
     padding: 12rem 0;
 }
 .prj_main {
@@ -460,6 +489,7 @@ li a:hover {
 }
 .prj_content-img {
     overflow: hidden;
+    border-radius: 20px 20px;
 }
 .prj_row-img {
     width: 100%;
@@ -487,7 +517,7 @@ li a:hover {
 }
 
 #contacts {
-    background: linear-gradient(to right,rgba(126, 112, 112, 0.8),rgba(245,245,245,.8));
+    
     background-size: cover;
     background-position: center;
     padding: 12rem;
@@ -496,21 +526,23 @@ li a:hover {
     max-width: 120rem;
     margin: auto;
     width: 92%;
+
 }
 .cont_form {
     box-shadow: 0 7px 29px  rgba(100,100,111,.2) ;
-    background: #fff;
+    background: #bebeb5;
     padding: 4rem;
     margin-top: 6rem;
     max-width: 80rem;
-    text-align: right;
+    text-align: center;
     width: 95%;
-    border-radius: 5px;
+    border-radius: 20px;
     margin: 5rem auto 0 auto;
 }
 form {
     display: block;
     margin-top: 0em;
+    padding-right: 60px;
 }
 input[type="hidden" i] {
     appearance: none;
@@ -526,6 +558,7 @@ input:not([type="file" i],
 [type="radio" i]) {
     background-color: #fff;
 }
+
 .cont_form-field {
     margin-bottom: 4rem;
 }
@@ -550,13 +583,15 @@ input:not([type="file" i],
     font-weight: 600;
 }
 .footer {
+    
     background: #000;
     color: #fff;
+   
+}
+.main-footer {
     max-width: 120rem;
     margin: auto;
     width: 92%;
-}
-.main-footer {
     padding: 4rem 0;
     border-top: 1px solid #444;
     color: #eee;
@@ -565,5 +600,8 @@ input:not([type="file" i],
     text-align: center;
 }
 .main-footer a {
-    
+    color: #fff;
+    text-decoration: underline;
+    font-weight: 700;
+    margin-left: 2px;
 }
