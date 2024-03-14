@@ -1,0 +1,128 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration</title>
+    <link rel="stylesheet" href="index.css">
+    <script src="https://kit.fontawesome.com/c3e4037687.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+    <div class="container">
+        <div class="top">
+            <a href="index.html"><i class="fa-solid fa-calendar-check"></i></a>
+            <nav class="navi">
+                <a href="index.html"><i class="fa-solid fa-house"></i>Home</a>
+                <a href="#"><i class="fa-solid fa-address-card"></i>About</a>
+                <a href="#"><i class="fa-solid fa-message"></i>Contact</a>
+                <select name="" id="LoginDropDown" class="LoginDropDown" >
+                    <option value="" selected>Login/SignUp</option>
+                    <option value="student-login.html">Student Login</option>
+                    <option value="registration.html">Student Registration</option>
+                    <option value="teacher-login.html">Teacher Login</option>
+                    <option value="admin-login.html">Admin Login</option>
+
+                </select>
+            </nav>
+        </div>
+        <div class="registration">
+            <form id="reg">
+                <h2>Student Registration</h2>
+
+                <div class="alert">Registration is Complete</div>
+                
+                <div class="input">
+                    <i class="fa-solid fa-id-badge"></i>
+                    <input type="text" id="name" placeholder="Full Name" required>
+                </div>
+
+                <div class="input">
+                    <i class="fa-solid fa-id-badge"></i>
+                    <input type="text" id="rollno" placeholder="Roll Number" required>
+                </div>
+
+                <div class="input">
+                    <i class="fa-solid fa-envelope"></i>
+                    <input type="email" id="email" placeholder="Email" required>
+                </div>
+
+                <div class="input">
+                    <i class="fa-solid fa-unlock"></i>
+                    <input type="password" id="password" placeholder="Password" required>
+                </div>
+
+                <!-- <div class="check">                     
+                    <input type="checkbox" id="remember" name="remember">
+                    <label for="remember">Remember Me</label>
+                </div> -->
+                <button class="btn" type="submit" id="submit">Register</button>
+
+               
+
+                <p>Already have an account ?  <a href="student-login.html">  Login</a></p>
+
+            </form>
+        </div>
+    </div>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase.js"></script>
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.1/firebase-app.js";
+        import { getDatabase, set, ref } from "https://www.gstatic.com/firebasejs/10.8.1/firebase-database.js";
+        import { getAuth, createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.8.1/firebase-auth.js";
+
+        const firebaseConfig = {
+          apiKey: "AIzaSyB93TKl3X9YbukHmd2QZNqaf4M6Te1Hzn8",
+          authDomain: "project-01-0704.firebaseapp.com",
+          databaseURL: "https://project-01-0704-default-rtdb.firebaseio.com",
+          projectId: "project-01-0704",
+          storageBucket: "project-01-0704.appspot.com",
+          messagingSenderId: "9377662846",
+          appId: "1:9377662846:web:1b8310eba6e0d88d44952f"
+        };
+      
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const db = getDatabase();
+        const auth = getAuth(app);
+
+        let name = document.getElementById("name");
+        let rollno = document.getElementById("rollno");
+        let email = document.getElementById("email");
+        let password = document.getElementById("password");
+
+        let RegisterUser = evt => {
+            evt.preventDefault();
+
+            createUserWithEmailAndPassword(auth, email.value, password.value)
+            .then((credentials)=>{
+                set(ref(db, 'UsersAuthList/' + credentials.user.uid),{
+                    name: name.value,
+                    rollno: rollno.value
+                })
+
+            })
+            .catch((error)=>{
+                alert(error.message);
+                console.log(error.code);
+                console.log(error.message);
+            })
+        }
+
+        reg.addEventListener('submit', RegisterUser);
+      </script>
+
+    <!-- <script>
+        const dropdown = document.getElementById("LoginDropDown");
+    
+        dropdown.addEventListener("change", function () {
+            const selectedValue = dropdown.value;
+            if (selectedValue !== "") {
+                window.location.href = selectedValue;
+            }
+        });
+    </script> -->
+</body>
+</html>
