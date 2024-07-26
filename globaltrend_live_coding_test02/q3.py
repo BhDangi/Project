@@ -26,4 +26,4 @@ weights = [1, 2, 3]
 values = [10, 15, 40]
 capacity = 6
 print(knapsack(weights, values, capacity))  
-# Output: 55 (Maximum value that can be obtained)
+# Output: 65 (Maximum value that can be obtained)
