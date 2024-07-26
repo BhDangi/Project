@@ -1,3 +1,5 @@
+// Write a function to find the longest common subsequence of two given strings.
+
 import java.util.Scanner;
 
 public class q1 {

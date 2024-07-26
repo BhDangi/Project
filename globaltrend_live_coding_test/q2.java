@@ -1,3 +1,5 @@
+// Write a function to find the shortest path from a source vertex to all other vertices in a graph using Dijkstra's algorithm.
+
 import java.util.*;
 
 public class q2 {

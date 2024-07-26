@@ -1,3 +1,6 @@
+//  Write a function to solve the 0/1 Knapsack problem using dynamic programming.
+
+
 public class q3 {
 
     public static int knapsack(int[] weights, int[] values, int capacity) {
